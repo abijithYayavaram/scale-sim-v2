@@ -18,7 +18,7 @@ class scale_config:
         self.ifmap_offset = 0
         self.filter_offset = 10000000
         self.ofmap_offset = 20000000
-        self.topofile = ""
+        self.topofile = "CALC"
         self.bandwidths = []
         self.valid_conf_flag = False
 
@@ -73,9 +73,9 @@ class scale_config:
 
     #
     def update_from_list(self, conf_list):
-        if not len(conf_list) > 11:
-            print("ERROR: scale_config.update_from_list: "
-                  "Incompatible number of elements in the list")
+        # if not len(conf_list) > 11:
+            # print("ERROR: scale_config.update_from_list: "
+                #   "Incompatible number of elements in the list")
 
         self.run_name = conf_list[0]
         self.array_rows = int(conf_list[1])

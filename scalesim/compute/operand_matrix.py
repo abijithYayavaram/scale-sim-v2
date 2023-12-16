@@ -36,7 +36,7 @@ class operand_matrix(object):
 
         # Flags
         self.params_set_flag = False
-        self.matrices_ready_flag = False
+        self.matrices_ready_flag = True
 
     #
     def set_params(self,
@@ -336,9 +336,7 @@ class operand_matrix(object):
             print(message)
             return
 
-        return self.ifmap_addr_matrix, \
-               self.filter_addr_matrix, \
-               self.ofmap_addr_matrix
+        return self.ifmap_addr_matrix, self.filter_addr_matrix, self.ofmap_addr_matrix
 
 
 if __name__ == '__main__':
